@@ -4,7 +4,7 @@ package UTN;
 public class Jugador implements Runnable{
 
     private String nombre;
-    private static int vidas = 15;
+    private static int vidas = 20;
 
     /*
     ALGUIEN JUGANDO == 1
@@ -40,5 +40,6 @@ public class Jugador implements Runnable{
         while (jugando !=-1) {
             Ahorcado.getInstance().jugar(this);
         }
+        Thread.currentThread().interrupt();
     }
 }

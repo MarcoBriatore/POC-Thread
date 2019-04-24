@@ -78,7 +78,7 @@ public class Ahorcado {
                     contenedor.setCharAt(index, letra.charAt(0));
             }
 
-            System.out.println("ENCONTRASTE UNA LETRA TIENES LA FRASE: " + contenedor + " ELIGE OTRA!");
+            System.out.println("ENCONTRASTE UNA LETRA TIENES LA FRASE: " + contenedor );
 
         } else {
             jugando = 0;
@@ -88,7 +88,7 @@ public class Ahorcado {
 
     private void palabraCompleta(Jugador jugador) {
         if (!contenedor.toString().contains("_")) {
-            //DBPalabrasMysql.getInstance().guardarJugador(jugador,palabra);
+            DBPalabrasMysql.getInstance().guardarJugador(jugador,palabra);
             jugando = -1;
             System.out.println("GENIAL LA PALABRA A ENCONTRAR ERA: " + palabra + " " + jugador.getNombre() + " ERES EL GANADOR ");
         }
